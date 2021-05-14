@@ -8,7 +8,7 @@ namespace Facit121
         {
             Console.WriteLine("Hello world!");
         }
-        public void Run()
+        public void Run123()
         {
             Lab1();
         }

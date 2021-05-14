@@ -20,7 +20,7 @@ namespace Facit121
 
 
 
-        public string PlussaStringar(string s1, int s2)
+        public string PlussaStringar(string s1, string s2)
         {
             return s1 + s2;
         }
@@ -69,6 +69,8 @@ namespace Facit121
                     longestSoFar = s;
                 }
             }
+
+            return longestSoFar;
         }
 
         void Lab5()
