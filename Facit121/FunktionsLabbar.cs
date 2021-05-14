@@ -6,13 +6,13 @@ namespace Facit121
 {
     public class FunktionsLabbar
     {
-        static string PrintMessage()
+        public string PrintMessage()
         {
             return "Hello World!";
         }
 
 
-        void Lab1()
+        public void Lab1()
         {
             string message = PrintMessage();
             Console.WriteLine(message);
@@ -25,12 +25,15 @@ namespace Facit121
             return s1 + s2;
         }
 
-        void Lab2()
+        public void Lab2()
         {
             string resultat = "";
             string start = "Hej ";
             string end = "hopp";
-            resultat = PlussaStringar(start, end);
+            //int a = (1 + 3) + 456;
+            string pls = PlussaStringar(start, end);
+            pls = pls.ToLower();
+            resultat = pls;
         }
 
 
@@ -41,11 +44,23 @@ namespace Facit121
             return Convert.ToInt32(belopp * 0.25m);
         }
 
-        void Lab3()
+        public void Lab3()
         {
-            Console.WriteLine(CalculateVat(100));
+            int belopp = Convert.ToInt32(Console.ReadLine());
+            int vat = CalculateVat(belopp);
+
+//            vat = CalculateVat(100);
+            Console.WriteLine(vat);
+            //Console.WriteLine(CalculateVat(100));
         }
 
+
+        public void RitaMeny()
+        {
+            Console.WriteLine("1. kjlsdaf");
+            Console.WriteLine("2. kjlsdaf");
+            Console.WriteLine("3. kjlsdaf");
+        }
 
         public void Run()
         {
@@ -58,7 +73,7 @@ namespace Facit121
 
 
 
-        string HittaLangstaOrdet(List<string> orden)
+        public string HittaLangstaOrdet(List<string> orden)
         {
             string longestSoFar = orden.First();
 
@@ -73,7 +88,7 @@ namespace Facit121
             return longestSoFar;
         }
 
-        void Lab5()
+        public void Lab5()
         {
             List<string> ord = new List<string>();
             ord.Add("Hej");
@@ -84,15 +99,17 @@ namespace Facit121
         }
 
 
-        bool IsMyndig(int age)
+        public bool IsMyndig(int age)
         {
             return age >= 18;
         }
-        private void Lab4()
+        public void Lab4()
         {
             Console.WriteLine("Hur många år är du");
             int age = Convert.ToInt32(Console.ReadLine());
-            if (IsMyndig(age))
+
+            
+            if (IsMyndig(age)) // Samma sak if (age>=18)
                 Console.WriteLine("Du är myndig");
             else
                 Console.WriteLine("Du är inte myndig");

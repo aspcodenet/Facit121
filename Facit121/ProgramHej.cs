@@ -6,10 +6,17 @@ namespace Facit121
     {
         static void Main(string[] args)
         {
-            //var helloWorld = new HelloWorld();
-            //helloWorld.Run123();
+
+            var demo = new Demos();
+            demo.Run();
+
+            Console.WriteLine("321132312");
 
 
+            var helloWorld = new HelloWorld();
+            //HelloWorld.Run123();
+            helloWorld.Run123();
+            
             //var variabelLabbar = new VariabelLabbar();
             //variabelLabbar.Run();
 
@@ -20,8 +27,12 @@ namespace Facit121
             //var looparLabbar = new  LooparLabbar();
             //looparLabbar.Run();
 
-            //var funktionsLabbar = new FunktionsLabbar();
-            //funktionsLabbar.Run();
+            var funktionsLabbar = new FunktionsLabbar();
+
+            string theMessage = funktionsLabbar.PrintMessage();
+
+            //funktionsLabbar.Lab2();
+            funktionsLabbar.Run();
 
 
         }
