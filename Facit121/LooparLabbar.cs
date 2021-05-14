@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Facit121
 {
@@ -11,8 +12,59 @@ namespace Facit121
             Lab3();
             Lab4();
             Lab5();
+            Lab6a();
+            Lab6b();
         }
 
+        public void Lab6b()
+        {
+            List<decimal> talen = new List<decimal>();
+            while (true)
+            {
+                Console.WriteLine("Skriv in temp");
+                decimal d = Convert.ToDecimal(Console.ReadLine());
+                talen.Add(d);
+                while(talen.Count > 3)
+                    talen.RemoveAt(0);
+
+                decimal summa = 0;
+                foreach (var tal in talen)
+                    summa += tal;
+
+                Console.WriteLine($"Medel: {summa / talen.Count}");
+            }
+        }
+
+
+
+        public void Lab6a()
+        {
+            decimal newest = 0;
+            decimal middle = 0;
+            decimal oldest = 0;
+            int count = 0;
+            while (true)
+            {
+                Console.WriteLine("Skriv in temp");
+                decimal d = Convert.ToDecimal(Console.ReadLine());
+                oldest = middle;
+                middle = newest;
+                newest = d;
+                count++;
+                if (count == 1)
+                {
+                    Console.WriteLine($"Medel: {newest}");
+                }
+                else if (count == 2)
+                {
+                    Console.WriteLine($"Medel: {(newest+middle)/2m}");
+                }
+                else
+                {
+                    Console.WriteLine($"Medel: {(newest + middle + oldest) / 3m}");
+                }
+            }
+        }
 
         static void Lab3()
         {
@@ -182,6 +234,21 @@ namespace Facit121
             //}
 
 
+        }
+
+        public void Lab7()
+        {
+            Random rnd = new Random();
+            while (true)
+            {
+                Console.WriteLine("Rolling the dices");
+                Console.WriteLine("The values are");
+                Console.WriteLine(rnd.Next(1,7));
+                Console.WriteLine(rnd.Next(1, 7));
+                Console.Write("Roll the dices again? y/n");
+                if (Console.ReadLine().ToLower() != "y") break;
+
+            }
         }
     }
 }

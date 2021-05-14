@@ -4,8 +4,14 @@ namespace Facit121
 {
     class ProgramHej
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            var looparLabbar = new  LooparLabbar();
+            looparLabbar.Lab7();
+            looparLabbar.Lab6a();
+            looparLabbar.Lab6b();
+
+
 
             var demo = new Demos();
             demo.Run();
@@ -24,8 +30,6 @@ namespace Facit121
             var ifLabbar = new IfLabbar();
             ifLabbar.Run();
 
-            //var looparLabbar = new  LooparLabbar();
-            //looparLabbar.Run();
 
             var funktionsLabbar = new FunktionsLabbar();
 
