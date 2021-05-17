@@ -34,11 +34,22 @@ namespace Facit121
 
         public void Run()
         {
+            var v1 = new HockeyPlayer {JerseyNumber = 21, Name = "Foppa"};
+            var v2 = new HockeyPlayer { JerseyNumber = 19, Name = "Bäckis" };
+
+            var v3 = new HockeyPlayer();
+            v3.JerseyNumber = 21;
+            v3.Name = "Foppa" ;
+
+
             List<HockeyPlayer> players = new List<HockeyPlayer>();
+
+
 
             players.Add(new HockeyPlayer { JerseyNumber  = 21, Name = "Foppa"});
             players.Add(new HockeyPlayer { JerseyNumber = 19, Name = "Bäckis" });
             players.Add(new HockeyPlayer { JerseyNumber = 13, Name = "Sudden" });
+
 
             while (true)
             {
