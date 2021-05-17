@@ -7,6 +7,9 @@ namespace Facit121
         public static void Main(string[] args)
         {
 
+            var demos111 = new Demos();
+            demos111.Run();
+
 
             var demo20120517 = new Demos20210517();
             demo20120517.Run();

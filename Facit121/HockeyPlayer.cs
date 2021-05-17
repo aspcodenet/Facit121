@@ -6,6 +6,11 @@ namespace Facit121
 {
     public class HockeyPlayer
     {
+        public HockeyPlayer() // CONSTRUCTOR!
+        {
+            TeamNames = new List<string>();
+        }
+        public List<string> TeamNames { get; set; }
         public string Name { get; set; } 
         public int JerseyNumber { get; set; }
     }
