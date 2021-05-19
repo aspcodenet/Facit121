@@ -70,10 +70,7 @@ namespace Facit121
             Console.WriteLine("*** Vegetariska ***");
             foreach (var mat in listan)
             {
-                if (mat.Typ == MatTyp.Vegetarisk)
-                {
-                    Console.WriteLine($"{mat.Namn} {mat.GetPrice()} {mat.AntalKalorier}");
-                }
+                Console.WriteLine($"{mat.Namn} {mat.GetPrice()} {mat.AntalKalorier}");
             }
 
             Console.WriteLine("*** Kött ***");
