@@ -58,8 +58,40 @@ namespace Facit121
 
         }
 
+        public void Lab3()
+        {
+            //Håll reda på om nästa char är
+            //först i nytt ord
+            //Går dock att göra med txtInfo.ToTitleCase
+            string namn = "kurt andersson";
+            string result = "";
+            bool isComingCharFirstInNewWord = true;
+            foreach (char ch in namn)
+            {
+                if (isComingCharFirstInNewWord == true)
+                {
+                    result += Char.ToUpper(ch);
+                }
+                else
+                {
+                    result += ch;
+                }
+
+                if (ch == ' ')
+                {
+                    isComingCharFirstInNewWord = true;
+                }
+                else
+                {
+                    isComingCharFirstInNewWord = false;
+                }
+                
+            }
+        }
+
         public void Run()
         {
+            Lab3();
             Lab7();
             Lab2();
             Lab1();
