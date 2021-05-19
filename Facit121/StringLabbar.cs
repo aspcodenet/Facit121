@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Facit121
 {
@@ -32,8 +33,34 @@ namespace Facit121
 
         }
 
+        public void Lab7()
+        {
+            Console.WriteLine("Mata in en text");
+            string inmatning = Console.ReadLine();
+            string reverse = "";
+
+            //Anna -> annA
+            //anna -> anna
+            inmatning = inmatning.ToLower();
+            inmatning = inmatning.Replace(" ", "");
+
+
+            foreach (char ch in inmatning)
+            {
+                reverse = ch + reverse;
+            }
+
+            if (reverse == inmatning)
+            {
+                Console.WriteLine("Detta är en palindrome");
+            }
+            //"kalle"  -> "lak"
+
+        }
+
         public void Run()
         {
+            Lab7();
             Lab2();
             Lab1();
         }

@@ -6,7 +6,7 @@ namespace Facit121
     {
         public static void Main(string[] args)
         {
-            var l = new KlasserLabbar2();
+            var l = new StringLabbar();
             l.Run();
 
             var labbar = new StringLabbar();
