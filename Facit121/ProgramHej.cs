@@ -9,8 +9,6 @@ namespace Facit121
             var l = new FunkDemos();
             l.Run();
 
-            var labbar = new StringLabbar();
-            labbar.Run();
 
             var demos111 = new Demos();
             demos111.Run();

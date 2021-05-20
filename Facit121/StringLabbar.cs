@@ -58,6 +58,52 @@ namespace Facit121
 
         }
 
+        public void Lab4()
+        {
+            string s = "Detta är en sträng som du skall ändra";
+            s = s.Replace(" ", "*");
+            
+            int antal = 0;
+            foreach (var ch in s)
+            {
+                if (ch == '*')
+                {
+                    antal++;
+                }
+            }
+            Console.WriteLine($"Antal: {antal}");
+
+        }
+
+        public void Lab5()
+        {
+            Console.WriteLine("Mata in en epostadress:");
+            string email = Console.ReadLine();
+
+            bool ok = true;
+            if (email.Contains("@") == false)
+            {
+                ok = false;
+            }
+
+            int index = email.LastIndexOf('.');
+            if (index == -1)
+            {
+                ok = false;
+            }
+            else
+            {
+                if (index < email.Length - 4)
+                {
+                    ok = false;
+                }
+            }
+
+
+        }
+
+
+
         public void Lab3()
         {
             //Håll reda på om nästa char är
@@ -91,6 +137,7 @@ namespace Facit121
 
         public void Run()
         {
+            Lab5();
             Lab3();
             Lab7();
             Lab2();
