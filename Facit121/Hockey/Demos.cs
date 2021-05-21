@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection.Metadata;
 
-namespace Facit121
+namespace Facit121.Hockey
 {
     public class Demos
     {

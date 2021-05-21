@@ -1,4 +1,6 @@
 ﻿using System;
+using Facit121.Hockey;
+using Facit121.Kennel;
 
 namespace Facit121
 {
@@ -6,8 +8,8 @@ namespace Facit121
     {
         public static void Main(string[] args)
         {
-            var salarySystem = new SalarySystem.SalarySystemArv();
-            salarySystem.Run();
+            var kenneln = new KennelSystemet();
+            kenneln.Run();
 
             var l = new FunkDemos();
             l.Run();

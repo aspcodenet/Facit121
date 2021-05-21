@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Facit121
+namespace Facit121.Hockey
 {
     public class HockeyPlayer
     {
