@@ -6,6 +6,9 @@ namespace Facit121
     {
         public static void Main(string[] args)
         {
+            var salarySystem = new SalarySystem.SalarySystemArv();
+            salarySystem.Run();
+
             var l = new FunkDemos();
             l.Run();
 
