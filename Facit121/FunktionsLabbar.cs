@@ -166,7 +166,8 @@ namespace Facit121
             {
                 if (IsVokal(ch))
                     translated += ch;
-                else
+                
+                else if (char.IsWhiteSpace(ch) == false)
                     translated += ch + "o" + ch;
             }
 
