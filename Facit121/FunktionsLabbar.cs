@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.VisualBasic;
 
 namespace Facit121
 {
@@ -114,5 +115,63 @@ namespace Facit121
             else
                 Console.WriteLine("Du är inte myndig");
         }
+
+        public void Lab6()
+        {
+            while (true)
+            {
+                Console.WriteLine("Ange en lön");
+                int salary = Convert.ToInt32(Console.ReadLine());
+                int taxes = CalculateTaxesOnSalary(salary);
+                Console.WriteLine($"Tjänar du {salary} blir skatten {taxes}");
+            }
+            
+        }
+
+        private int CalculateTaxesOnSalary(int salary)
+        {
+            if (salary >= 30000)
+                return Convert.ToInt32(salary*0.33);
+            if (salary < 15000)
+                return Convert.ToInt32(salary * 0.12);
+            return Convert.ToInt32(salary * 0.28);
+        }
+
+        public void Lab7()
+        {
+            bool v = IsVokal('a');
+        }
+
+        private bool IsVokal(char c)
+        {
+            char[] vokals = { 'a','o','u','å','e','i','y','ä','ö' };
+            return vokals.Contains(Char.ToLower(c));
+        }
+
+        public void Lab8()
+        {
+            while (true)
+            {
+                Console.WriteLine("Ange en text");
+                string input = Console.ReadLine();
+                string rovarSprak = Translate(input);
+                Console.WriteLine(rovarSprak);
+            }
+        }
+
+        private string Translate(string input)
+        {
+            string translated = "";
+            foreach (char ch in input)
+            {
+                if (IsVokal(ch))
+                    translated += ch;
+                else
+                    translated += ch + "o" + ch;
+            }
+
+            return translated;
+        }
+
     }
 }
